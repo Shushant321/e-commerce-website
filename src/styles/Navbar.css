@@ -1,0 +1,113 @@
+.navbar {
+  height: 45px;
+  background-color: #0f1111;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  border-radius: 10px;
+}
+
+.navbar__left,
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar__welcome {
+  font-weight: bold;
+}
+
+.navbar__home {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 4px 10px;
+}
+
+.navbar__searchWrapper {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.navbar__search {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  flex: 1;
+}
+
+.navbar__searchBtn {
+  padding: 8px 12px;
+  background-color: #f0c14b;
+  border: 1px solid #a88734;
+  border-left: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.navbar__cart {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  font-weight: bold;
+}
+
+.navbar__cart span {
+  color: orange;
+  font-weight: bold;
+  margin-left: 4px;
+}
+
+.navbar__logout {
+  background-color: #f56565;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+/* 🔥 Hover underline animation */
+.navbar__link {
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: orange;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar__link:hover::after {
+  width: 100%;
+}
+
+.navbar__link:hover {
+  color: orange;
+}
+
+/* 📱 Responsive design */
+@media screen and (max-width: 768px) {
+  .navbar__center {
+    width: 100%;
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .navbar__search {
+    width: 60%;
+  }
+}

@@ -1,5 +1,6 @@
 
 import { createContext, useContext, useState, useEffect } from "react";
+import { toast } from "react-toastify";
 
 
 // 1️⃣ Create context
@@ -23,12 +24,14 @@ export const CartProvider = ({ children }) => {
 
   // ➕ Add item to cart
   const addToCart = (product) => {
-    setCartItems((prev) => [...prev, product]);
+    setCartItems(prev => [...prev, product]);
+    toast.success();
   };
 
   // ❌ Remove item by ID
   const removeFromCart = (id) => {
-    setCartItems((prev) => prev.filter((item) => item.id !== id));
+    setCartItems(prev => prev.filter(item => item.id !== id));
+    toast.info();
   };
 
   // 🧹 Clear the cart

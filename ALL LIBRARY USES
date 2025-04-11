@@ -1,0 +1,9 @@
+Library                  	Purpose	                                           Use
+react	              Core frontend framework	                     Build UI components (JSX)
+react-dom	              DOM rendering	                              Mount React app to HTML
+react-router-dom	         Routing	                 Navigate between Login, Home, Cart, ProductDetail, etc.
+react-toastify	       Toast notifications	               Show success/error/info toasts like ✅ Added to Cart
+react-slick	             Carousel/Slider	                  Used in <BannerSlider /> to slide images like Amazon
+slick-carousel      	CSS for react-slick	                     Styling of slider arrows, dots, transitions
+aos (optional)	        Animate on scroll	                Smooth animations when product cards scroll into view
+uuid (optional)   	Unique keys generation                 	Used when needed for dynamic lists (not added yet but common)

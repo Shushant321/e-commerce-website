@@ -1,16 +1,18 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
-import { CartProvider } from "./context/CartContext";  // ✅ import your context
-import { BrowserRouter } from "react-router-dom";
-import './index.css';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import { CartProvider } from './context/CartContext';
+import { BrowserRouter } from 'react-router-dom';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // ✅ Required CSS
 
-createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <CartProvider> {/* ✅ Wrap with context */}
+    <CartProvider>
       <BrowserRouter>
         <App />
+        <ToastContainer position="top-right" autoClose={2000} theme="colored" />
       </BrowserRouter>
     </CartProvider>
   </React.StrictMode>
