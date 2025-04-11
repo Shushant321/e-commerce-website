@@ -1,3 +1,6 @@
+/* ====================
+   Navbar Base Styles
+==================== */
 .navbar {
   height: 45px;
   background-color: #0f1111;
@@ -7,6 +10,7 @@
   justify-content: space-between;
   padding: 0 10px;
   border-radius: 10px;
+  flex-wrap: nowrap; /* important to keep default horizontal */
 }
 
 .navbar__left,
@@ -31,6 +35,7 @@
   width: 50%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .navbar__search {
@@ -99,15 +104,30 @@
   color: orange;
 }
 
-/* 📱 Responsive design */
+/* ========================
+   📱 Responsive (Mobile)
+======================== */
 @media screen and (max-width: 768px) {
-  .navbar__center {
+  .navbar {
+    flex-wrap: wrap; /* ✅ allow wrap on small screen */
+    padding-bottom: 10px;
+    height: auto; /* height adjust ho jaye if wrap happens */
+  }
+
+  .navbar__searchWrapper {
     width: 100%;
+    order: 3; /* ✅ force it below left + right */
     margin-top: 10px;
+    padding: 0 10px;
     justify-content: center;
   }
 
   .navbar__search {
-    width: 60%;
+    width: 100%;
+    border-radius: 4px 0 0 4px;
+  }
+
+  .navbar__searchBtn {
+    border-radius: 0 4px 4px 0;
   }
 }
